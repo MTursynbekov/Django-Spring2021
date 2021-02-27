@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block body %}
+{% for task in tasks %}
+    <tr>
+        <th style="color: #1E90FF">{{ task.name }}</th>
+        <th>{{ task.created }}</th>
+        <th>{{ task.due }}</th>
+        <th>{{ task.owner }}</th>
+        <th><button class="mark button">{{task.mark}}</button></th>
+    </tr>
+{% endfor %}
+{% endblock %}

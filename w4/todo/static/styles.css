@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+}
+.navbar{
+    background-color: #2F4F4F;
+    color: #FFF;
+    font-size: 1.5rem;
+    height: 2em;
+    line-height: 2em;
+    padding-left: 1em;
+}
+
+.container{
+    display: flex;
+    max-width: 80%;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.button{
+    background-color: #1E90FF;
+    color: #FFF;
+    border: none;
+    text-align: center;
+    display: inline-block;
+    padding: 0.5em 1em;
+    font-size: 1rem;
+    transition-duration: 0.4s;
+}
+
+.add:hover {
+    background-color: #FFF;
+    color: #000;
+    border: 1px solid #1E90FF;
+}
+
+.view-tasks{
+    background-color: #FFD700;
+    color: #000;
+}
+
+.view-tasks:hover {
+    background-color: #FFF;
+    border: 1px solid #FFD700;
+}
+
+.delete{
+    background-color: #DC143C;
+}
+
+.delete:hover {
+    background-color: #FFF;
+    border: 1px solid #DC143C;
+    color: #000;
+}
+
+.mark{
+    font-size: 0.8rem;
+}
+
+.mark:hover {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #1E90FF;
+}

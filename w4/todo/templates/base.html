@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TODO</title>
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <nav class="navbar">BFDjango TODO</nav>
+    <br>
+    <div class="container">
+        <div>
+            <button class="add button row">
+                Add Task
+            </button>
+        </div>
+
+        <br>
+        <h1 class="row">
+            {% if status == 1 %}
+            Tasks in {{todo.name}}
+            {% else %}
+            Completed tasks in {{todo.name}}
+            {% endif %}</h1>
+        <table>
+            <tr>
+                <th>Task</th>
+                <th>Created</th>
+                <th>Due on</th>
+                <th>Owner</th>
+                <th>Mark</th>
+            </tr>
+
+            {% block body %}
+            {% endblock %}
+        </table>
+
+        <hr>
+        <div>
+            <button class="view-tasks button">
+            {% if status == 1 %}View completed tasks
+            {% else %} View incomplete tasks
+            {% endif %}
+            </button>
+
+            <button class="delete button">
+                Delete this list
+            </button>
+        </div>
+
+    </div>
+</body>
+</html>
